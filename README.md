@@ -22,13 +22,36 @@ A simplified backend payroll system built with Go (Golang), PostgreSQL, and Gin.
 ## 📦 Project Structure
 
 ```
-├── main.go
-├── model/               # Struct definitions (e.g., Payslip)
-├── handlers/            # Route handlers and unit test
-├── middleware/          # JWT auth middleware
-├── migrations/          # SQL schema
-├── test/                # Sample test cases
+├── cmd/
+│   └── main.go              # Main application entry point
+├── internal/
+│   ├── handlers/            # Gin route handlers
+│   │   ├── admin_payslip_summary.go
+│   │   └── attendance_period.go
+│   │   ├── attendance.go
+│   │   └── auth.go
+│   │   ├── employee_payslip.go
+│   │   └── overtime.go
+│   │   ├── payroll.go
+│   │   └── reimbursement.go
+│   ├── middleware/          # JWT auth middleware
+│   │   └── auth.go
+│   └── test/                # black-box tests
+│   │   ├── admin_payslip_summary_test.go
+│   │   └── attendance_period_test.go
+│   │   ├── attendance_test.go
+│   │   └── auth_test.go
+│   │   ├── employee_payslip_test.go
+│   │   └── overtime_test.go
+│   │   ├── payroll_test.go
+│   │   └── reimbursement_test.go
+├── model/                   # Data models (e.g., User, Payslip)
+├── migrations/              # SQL migration files
+├── utils/                   # utilities functions
+├── go.mod
+├── go.sum
 └── README.md
+
 ```
 
 ## 🔐 Authentication
@@ -67,14 +90,14 @@ go test ./...
 ```
 
 ### Test Files
-- `test/employee_payslip_test.go`
-- `test/admin_summary_test.go`
-- `test/auth_test.go`
-- `test/admin_payslip_summary_test.go`
-- `test/attendance_period_test.go`
-- `test/overtime_test.go`
-- `test/payroll_test.go`
-- `test/reimbursement_test.go`
+- `handlers/employee_payslip_test.go`
+- `handlers/admin_summary_test.go`
+- `handlers/auth_test.go`
+- `handlers/admin_payslip_summary_test.go`
+- `handlers/attendance_period_test.go`
+- `handlers/overtime_test.go`
+- `handlers/payroll_test.go`
+- `handlers/reimbursement_test.go`
 
 ## 🏁 Getting Started
 
@@ -154,7 +177,7 @@ The project follows a simplified layered architecture:
 - **Test (`test/`)**  
   Includes scaffolding and unit tests for key features and API endpoints.
 
-- **Entry Point (`main.go`)**  
+- **Entry Point (`cmd/main.go`)**  
   Sets up the Gin engine, initializes routes, connects to the database, and runs the application.
 
 #### Data Flow Overview
