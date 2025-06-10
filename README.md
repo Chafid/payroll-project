@@ -45,7 +45,7 @@ A simplified backend payroll system built with Go (Golang), PostgreSQL, and Gin.
 │   │   └── overtime_test.go
 │   │   ├── payroll_test.go
 │   │   └── reimbursement_test.go
-├── model/                   # Data models (e.g., User, Payslip)
+├── models/                   # Data models (e.g., User, Payslip)
 ├── migrations/              # SQL migration files
 ├── utils/                   # utilities functions
 ├── go.mod
@@ -165,7 +165,7 @@ The project follows a simplified layered architecture:
 - **Handlers (`handlers/`)**  
   Handle incoming HTTP requests and responses, parse input, and format output. Also perform minor validation and context extraction (e.g., from JWT).
   
-- **Models (`model/`)**  
+- **Models (`models/`)**  
   Define data structures used across the application, such as `User`, `Payslip`, `Attendance`, and various response DTOs.
   
 - **Middleware (`middleware/`)**  
