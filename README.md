@@ -67,14 +67,14 @@ go test ./...
 ```
 
 ### Test Files
-- `handlers/employee_payslip_test.go`
-- `handlers/admin_summary_test.go`
-- `handlers/auth_test.go`
-- `handlers/admin_payslip_summary_test.go`
-- `handlers/attendance_period_test.go`
-- `handlers/overtime_test.go`
-- `handlers/payroll_test.go`
-- `handlers/reimbursement_test.go`
+- `test/employee_payslip_test.go`
+- `test/admin_summary_test.go`
+- `test/auth_test.go`
+- `test/admin_payslip_summary_test.go`
+- `test/attendance_period_test.go`
+- `test/overtime_test.go`
+- `test/payroll_test.go`
+- `test/reimbursement_test.go`
 
 ## 🏁 Getting Started
 
