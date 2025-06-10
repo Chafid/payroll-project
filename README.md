@@ -65,7 +65,10 @@ This application uses **JWT (JSON Web Tokens)** for authentication:
   ```
 - Middleware extracts `userID` and `isAdmin` from the token and injects them into the context.
 
-## 📑 API Endpoints (Sample)
+## 📑 API Endpoints 
+
+### Base URL
+`http://localhost:8000/api`
 
 ### Admin
 - `POST /admin/run-payroll/:period_id` — Run payroll for period
