@@ -16,9 +16,6 @@ import (
 )
 
 func main() {
-	//create password: will delete later
-	password := utils.CreatePassword()
-	fmt.Printf("password admin: %s\n", password)
 	//Load env variables if present
 	config.LoadConfig()
 
